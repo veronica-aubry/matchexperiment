@@ -49,7 +49,7 @@ namespace RepeatCount
            {
             _wordTotal = _wordTotal + 1;
             _puncSentence.RemoveAt(i);
-            _puncSentence.Insert(i, "<p class='match'>" + _searcher + "</p>");
+            _puncSentence.Insert(i, "<span class='match'>" + _searcher + "</span>");
            }
         }
         return _wordTotal;
