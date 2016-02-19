@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Content/css/styles.css'>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>WORD COUNTER</h1>
+    </div>
+    <div class="container">
+      <h1> RESULTS </h1>
+      <p>Search term: @Model.GetWord() </p>
+      <p>Search field: @Model.GetSentence()</p>
+      <p class ="results">Your search word appears @Model.CountRepeats() times.</p>
+      <a href="/">Search Again</a>
+    </div>
+  </body>
+
+</html>

@@ -3,8 +3,21 @@
   <head>
     <title>Hello Friend!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Content/css/styles.css'>
   </head>
   <body>
-    <h1>THIS IS A TEMPLATE</h1>
+    <div class="jumbotron">
+      <h1>WORD COUNTER</h1>
+    </div>
+    <div class="container">
+      <p>Count how many times a word appears in your text.</p>
+      <form action="/results" method="post">
+        ENTER WORD TO SEARCH FOR: <input type="text" name="word" value="">
+        <br><br>
+        <textarea rows="5" cols="50" name="sentence" value=""> Text to search in. </textarea>
+        <br><br>
+        <button type="submit" name="button">SUBMIT</button>
+      </form>
+    </div>
   </body>
 </html>

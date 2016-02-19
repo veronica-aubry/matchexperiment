@@ -19,8 +19,15 @@ namespace RepeatCount
       _wordTotal = 0;
     }
 
+      public string GetWord()
+      {
+        return _searcher;
+      }
 
-//getters and setters for properties//
+      public string GetSentence()
+      {
+        return _searchSentence;
+      }
 
       public int CountRepeats()
       {
