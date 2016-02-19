@@ -1,3 +1,7 @@
 .results {
   font-size: 2em;
 }
+
+.match {
+  color: blue;
+}

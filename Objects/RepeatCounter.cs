@@ -11,6 +11,9 @@ namespace RepeatCount
     private int _wordTotal;
     private string _searcher;
     private string _searchSentence;
+    private List<string> _puncSentence;
+    private string matchSentence;
+    private string strippedSentence;
 
     public RepeatCounter(string searcher, string searchSentence )
     {
@@ -29,15 +32,24 @@ namespace RepeatCount
         return _searchSentence;
       }
 
+      public string GetMatchSentence()
+      {
+        matchSentence = String.Join(" ", _puncSentence);
+        return matchSentence;
+      }
+
       public int CountRepeats()
       {
-        _searchSentence = new string(_searchSentence.Where(c => !char.IsPunctuation(c)).ToArray());
-        string [] splitSentence = _searchSentence.Split(' ');
-        foreach (string word in splitSentence)
-        {
-           if (word == _searcher)
+        _puncSentence = _searchSentence.Split(' ').ToList();
+        strippedSentence = new string(_searchSentence.Where(c => !char.IsPunctuation(c)).ToArray());
+        List<string> splitSentence = strippedSentence.Split(' ').ToList();
+        for (int i = 0; i <= (splitSentence.Count - 1); i++)
+          {
+           if (splitSentence[i] == _searcher)
            {
             _wordTotal = _wordTotal + 1;
+            _puncSentence.RemoveAt(i);
+            _puncSentence.Insert(i, "<p class='match'>" + _searcher + "</p>");
            }
         }
         return _wordTotal;
