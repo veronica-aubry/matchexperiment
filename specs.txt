@@ -1,8 +1,8 @@
 BDD Logic:
--start with ability to find/count one letter (I, happy pie should return 1)
+-start with ability to find/count one word (I, I like happy pie should return 1)
 	1.) convert input and sentence to lowercase (i, happy pie)  OR use Regex for case insensitivity
 	2.) match method is performed on each char in the string and adds +1 to a counter, returns 1
--next, needs to be able to find more than one match (i, I like happy pie, should return 4)
+-next, needs to be able to find more than one match (i, I like happy pie, don't I, should return 2)
 	1.) convert input and sentence to lowercase (i, i like happy pie)  OR use Regex for case insensitivity
 	2.) method loops for length of the string, checking each char, +1 to a counter variable for each match. returns 4.
 -now should check full words. (like, I like happy pie like a lot, should return 2)
