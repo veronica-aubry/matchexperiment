@@ -24,5 +24,19 @@ namespace  RepeatCount
       Assert.Equal(2, test.CountRepeats());
     }
 
+    [Fact]
+    public void CountRepeats_Forpiewithcomma_2()
+    {
+      RepeatCounter test = new RepeatCounter("pie", "i like pie, LIKE a lot. PIE is great. Pie: the  greatest thing ever.");
+      Assert.Equal(3, test.CountRepeats());
+    }
+
+    public void CountRepeats_ForWordInsideWord_2()
+    {
+      RepeatCounter test = new RepeatCounter("cry", "I love to cry, but I hate crybabies.");
+      Assert.Equal(1, test.CountRepeats());
+    }
+
+
   }
 }

@@ -24,6 +24,7 @@ namespace RepeatCount
 
       public int CountRepeats()
       {
+        _searchSentence = new string(_searchSentence.Where(c => !char.IsPunctuation(c)).ToArray());
         string [] splitSentence = _searchSentence.Split(' ');
         foreach (string word in splitSentence)
         {
