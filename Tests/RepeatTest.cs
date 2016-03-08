@@ -3,6 +3,14 @@ namespace  RepeatCount
 {
   public class RepeatTest
   {
+
+    [Fact]
+    public void CountRepeats_ForI_1()
+    {
+      RepeatCounter test = new RepeatCounter("I", "i");
+      Assert.Equal(1, test.CountRepeats());
+    }
+
     [Fact]
     public void CountRepeats_ForIandIlovepie_1()
     {
